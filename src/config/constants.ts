@@ -1,0 +1,1 @@
+export const BASE_URL = process.env.NODE_ENV === "test" ? "https://abc.vercel.app/": process.env.NODE_ENV === "production" ? "https://www.example.com/" : "http://localhost:3000/";

@@ -27,7 +27,6 @@ export default function RootLayout({
           <ThemeProvider>
             {/* <Header /> */}
             {children}
-            {/* <Footer /> */}
           </ThemeProvider>
         </Box>
       </body>

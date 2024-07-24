@@ -1,10 +1,9 @@
 'use client'
-import { AddBoxOutlined } from '@mui/icons-material';
+
 import { Box, styled, Typography, useTheme } from '@mui/material'
 import { motion } from 'framer-motion';
-import { relative } from 'path';
 import React from 'react'
-import OrbitLayout from './orbitExampl';
+import OrbitLayout from './OrbitLayout';
 import Slider from './Slider/Slider';
 
 
@@ -77,7 +76,7 @@ const contentRightVariants = {
     animate: { x: '0%', transition: { duration: 2 } },
     whileHover: { scale: 1.1, transition: { duration: 2 } },
 };
-const Example = () => {
+const Hero = () => {
     const theme:any = useTheme();
     return (
         <Box 
@@ -136,4 +135,4 @@ const Example = () => {
     )
 }
 
-export default Example
+export default Hero

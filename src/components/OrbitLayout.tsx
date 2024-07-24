@@ -15,20 +15,6 @@ const OuterOrbitContainer = styled(motion.div)({
   alignItems: 'center',
   justifyContent: 'center',
 });
-// const OrbitContainer = styled(motion.div)({
-//     position: 'relative',
-//     width: '300px',
-//     height: '300px',
-//     borderRadius: '50%',
-//     // border: '2px solid #000',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     backgroundImage: `url('/robot-face.png')`,
-//     backgroundSize: 'cover',
-//     backgroundPosition: 'center center',
-//     backgroundRepeat: 'no-repeat',
-// });
 const OrbitContainer = styled(motion.div)({
   position: 'relative',
   width: '300px',

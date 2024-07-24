@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 
-export default function CardUI({id, name, description, imageUrl}) {
+export default function CardUI({id, name, description, imageUrl}:any) {
     return (
         <Card sx={{ maxWidth: 230 }} >
             <CardActionArea>

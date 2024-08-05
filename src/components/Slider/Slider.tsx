@@ -5,7 +5,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box, IconButton, List, ListItem, ListItemIcon, ListItemText, Typography, useTheme } from "@mui/material";
 import WestIcon from '@mui/icons-material/West';
-import { Circle as CircleIcon } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
 const responsive = {
@@ -41,10 +40,9 @@ const AnimatedListItem = motion(ListItem);
 const Slider = () => {
     const theme:any = useTheme();
     
-
     const sliderContent = [
         {
-            heading: "Why Choose Effigenics?",
+            heading: "Why Choose AIElysium?",
             content: [
                 'Expertise: Seasoned AI professionals with extensive industry experience.',
                 'Customization: Bespoke solutions tailored to your business needs.',
@@ -58,6 +56,8 @@ const Slider = () => {
             content: `At Effigenics, we are a team of passionate AI consultants, engineers, and developers dedicated to transforming businesses through innovative artificial intelligence solutions. Our mission is to solve your company's most pressing challenges with state-of-the-art AI technologies, beautifully designed interfaces, and a commitment to ethical AI practices.`,
         }
     ]
+    
+    
     const CustomRight:any = ({ onClick }:any) => (
         <IconButton
             onClick={onClick}

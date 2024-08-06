@@ -4,26 +4,33 @@ import { motion } from 'framer-motion';
 import { styled } from '@mui/system';
 import { AddBoxOutlined } from '@mui/icons-material';
 
-const OuterOrbitContainer = styled(motion.div)({
+const OuterOrbitContainer = styled(motion.div)(({ theme }) => ({
   position: 'relative',
-  width: '400px',
-  height: '400px',
+  width: '360px',
+  height: '360px',
   borderRadius: '50%',
   border: '2px solid #000',
   background: 'red',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-});
-const OrbitContainer = styled(motion.div)({
+  [theme.breakpoints.down('sm')]: {
+    width: '360px',
+  },
+}));
+const OrbitContainer = styled(motion.div)(({ theme }) => ({
   position: 'relative',
-  width: '300px',
-  height: '300px',
+  width: '280px',
+  height: '280px',
   borderRadius: '50%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-});
+  [theme.breakpoints.down('sm')]: {
+    width: '280px',
+  //  color: '#fff',
+  },
+}));
 const BackgroundImage = styled(motion.div)({
   position: 'absolute',
   width: '100%',
@@ -64,7 +71,7 @@ const generateOrbits = (numOrbs:any) => {
 
 const OrbitLayout = ({ numOrbs = 6 }) => {
   const orbs = generateOrbits(numOrbs);
-  const radius = 200; // Distance from center
+  const radius = 180; // Distance from center
 
   const orbVariants = {
     initial: { opacity: 1, scale: 0.8 },

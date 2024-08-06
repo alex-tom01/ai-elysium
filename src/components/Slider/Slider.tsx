@@ -95,10 +95,12 @@ const Slider = () => {
     return (
         <Box 
             sx={{
-                px: {xs: 1, md: 5}, 
-                bgcolor: "red", 
-                height: '100%', 
-                width: '60%'
+                px: {xs: 1, md: 3}, 
+                bgcolor: "red",
+                height: {xs: '100%',md:'400px'}, 
+                width: { xs: '90%', md:'60%'},
+                borderRadius: '20px',
+                overflow: 'hidden'
             }}
         >
             <Carousel
@@ -116,7 +118,7 @@ const Slider = () => {
                 return (
                     <Box key={index}  sx={{ 
                         padding: {xs: "2rem 0",md:"2rem 0"}, 
-                        // height: 300
+                        height: {xs: '100%',md: 360}, 
                     }} >
                         <Typography variant="h5">{item.heading}</Typography>
                         {
@@ -124,7 +126,7 @@ const Slider = () => {
                             ? <Typography variant="caption">{item.content}</Typography> 
                             : <List 
                                 sx={{ 
-                                    width: {xs: '100%', md:'100%'}, p: '1px', 
+                                    width: {xs: '100%', md:'100%'}, p: '0px', 
                                     // bgcolor: 'background.paper' 
                                 }}>
                             {item.content.map((value, i) => (
@@ -136,8 +138,9 @@ const Slider = () => {
                                 animate="visible"
                                 variants={listVariants}
                             >
-                            <ListItemText sx={{ fontSize: 10, fontWeight: 300, color: 'GrayText' }} primary={`${value}`} />
-                          </AnimatedListItem>
+                                {/* <ListItemText sx={{ fontSize: 7, fontWeight: 300, color: '#fff' }} primary={`${value}`} /> */}
+                                <Typography variant="caption">{value}</Typography> 
+                            </AnimatedListItem>
                             ))}
                         </List>
                         }
